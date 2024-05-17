@@ -1,3 +1,4 @@
+// Declare variables
 const modal = document.querySelector(".modal");
 const overlay = document.querySelector(".overlay");
 const buttonCloseModal = document.querySelector(".close-modal");
@@ -7,18 +8,21 @@ for (let i = 0; i < buttonOpenModal.length; i++) {
     console.log(buttonOpenModal[i].textContent);
 }
 
+// Open modal function
 const openButton = () => {
     
      modal.classList.remove('hidden')
      overlay.classList.remove('hidden')
 }
 
+// Close modal function
 const closeButton = () => {
     modal.classList.add('hidden')
     overlay.classList.add('hidden')
 }
 
 
+// Event listeners
 buttonOpenModal.forEach((btn) => btn.addEventListener('click', openButton));
 buttonCloseModal.addEventListener('click', closeButton);
 overlay.addEventListener('click', closeButton);
